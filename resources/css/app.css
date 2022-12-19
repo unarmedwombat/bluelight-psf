@@ -1,0 +1,88 @@
+@import '../../vendor/filament/forms/dist/module.esm.css';
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+[x-cloak] { display: none !important; }
+
+.text-4axl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}
+@media (min-width:1536px) {
+    .text-4axl {
+        font-size: 2.4rem;
+        line-height: 2.75rem;
+    }
+}
+
+.auth-grid {
+    aspect-ratio: 4/3;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 45% 30% 25%;
+    grid-template-areas:
+        "a11 a12"
+        "txt a22"
+        "a21 a22";
+}
+.auth-grid .i11 { grid-area: a11;}
+.auth-grid .i12 { grid-area: a12;}
+.auth-grid .i21 { grid-area: a21;}
+.auth-grid .i22 { grid-area: a22;}
+.auth-grid .txt { grid-area: txt;}
+
+.bg-grad {
+    background: rgb(0,17,65);
+    background: linear-gradient(135deg, rgba(0,18,64,1) 10%, rgba(49,84,162,1) 100%) fixed;
+}
+.bg-f-grad {
+    background: rgb(0,17,65);
+    background: linear-gradient(135deg, rgba(6,16,44,1) 10%, rgba(25,39,70,1) 100%);
+}
+
+.currency-input {
+    background: white url(/img/gbp-bg.png) left center no-repeat;
+}
+
+.active-fw {
+    @apply text-primary;
+}
+.active-fw svg {
+    transform:scale(2);
+}
+
+.aspect-square {
+    aspect-ratio: 1/1;
+}
+.aspect-rect {
+    aspect-ratio: 2/1;
+}
+
+.bg-bar {
+    background: url('/img/bar-lg.jpg') no-repeat;
+    background-size: contain;
+}
+@media (min-width: 1921px) {
+    .bg-bar {
+        background: url('/img/bar-xl.jpg');
+    }
+}
+#framework-detail .active-tab {
+    @apply text-gray-700;
+    @apply bg-primary;
+}
+
+.organisation .active {
+    @apply bg-primary;
+    @apply text-gray-700;
+    @apply mr-0;
+    @apply pr-16;
+}
+.organisation :hover.active {
+    @apply text-gray-700;
+}
+
+.simplebar-scrollbar:before {
+    background: #00ecff !important;
+}
